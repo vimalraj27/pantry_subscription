@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include pantry *.css
+recursive-include pantry *.csv
+recursive-include pantry *.html
+recursive-include pantry *.ico
+recursive-include pantry *.js
+recursive-include pantry *.json
+recursive-include pantry *.md
+recursive-include pantry *.png
+recursive-include pantry *.py
+recursive-include pantry *.svg
+recursive-include pantry *.txt
+recursive-exclude pantry *.pyc
