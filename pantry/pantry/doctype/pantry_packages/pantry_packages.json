@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "field:package_name",
+ "creation": "2021-11-22 16:20:30.087078",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "package_name",
+  "items_fetch",
+  "package_price",
+  "route",
+  "image"
+ ],
+ "fields": [
+  {
+   "fieldname": "package_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Package Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "pantry_items_fetch.sum",
+   "fieldname": "package_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Package Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "items_fetch",
+   "fieldtype": "Table",
+   "label": "Items Fetch",
+   "options": "Pantry Items Fetch",
+   "reqd": 1,
+   "width": "50"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Route",
+   "read_only": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image"
+  }
+ ],
+ "has_web_view": 1,
+ "image_field": "image",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-29 17:15:50.777074",
+ "modified_by": "Administrator",
+ "module": "Pantry",
+ "name": "Pantry Packages",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "pantry",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

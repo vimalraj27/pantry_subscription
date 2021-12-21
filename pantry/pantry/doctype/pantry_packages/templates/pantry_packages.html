@@ -1,0 +1,35 @@
+{%  extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="py-20 row">
+    <div class="col-sm-2">
+        <img src="{{ image }}" alt="{{ title }}">
+    </div>
+    <div class="col">
+        <h1>{{ title }}</h1>
+        <div class="mt-4">
+            <div>Package Name: <strong>{{ package_name }}</strong></div>
+            <div>Package Price: <strong>Rs.{{ package_price }}</strong></div>
+            <br>
+        </div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class="text-center">{{ _("Product Name") }}</th>
+                    <th class="text-center">{{ _("Product Type") }}</th>
+                    <th class="text-center">{{ _("Product Price") }}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for data in items_fetch %}
+                <tr>
+                    <td class="text-center">{{ data.pantry_fetch }}</td>
+                    <td class="text-center">{{ data.fctype }} </td>
+                    <td class='text-center'> {{ data.fcprice }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</div>
+{% endblock %}

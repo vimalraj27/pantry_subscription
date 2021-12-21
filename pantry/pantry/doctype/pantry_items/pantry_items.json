@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:item_name",
+ "creation": "2021-11-22 15:59:02.785082",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_name",
+  "item_type",
+  "number_of_items_if_applicable",
+  "item_quantity",
+  "item_price",
+  "item_tax",
+  "item_total_price"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "item_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Item Type",
+   "options": "-Select-\nBaking\nBeverages\nBreads\nCannes Goods\nCereal\nCondiments\nDairy\nDeli\nFrozen food\nFruits\nHousehold\nMeat / Fish\nPaper / Wrap\nPasta / Rice\nPet Items\nSauce / Oils\nSnacks\nSpices\nToiletries\nVegetables",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_price",
+   "fieldtype": "Currency",
+   "label": "Item Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_tax",
+   "fieldtype": "Int",
+   "label": "Item Tax (%)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_total_price",
+   "fieldtype": "Currency",
+   "label": "Item Total Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_quantity",
+   "fieldtype": "Int",
+   "label": "Item Quantity (Kg/Litres)"
+  },
+  {
+   "fieldname": "number_of_items_if_applicable",
+   "fieldtype": "Int",
+   "label": "Number of Items (If applicable)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-26 09:59:19.876449",
+ "modified_by": "Administrator",
+ "module": "Pantry",
+ "name": "Pantry Items",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PS.#####",
+ "creation": "2021-11-22 16:04:13.177496",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pantry_customer",
+  "image",
+  "full_name",
+  "package",
+  "from_date",
+  "subscription_months",
+  "to_date",
+  "price",
+  "amended_from",
+  "package_cost"
+ ],
+ "fields": [
+  {
+   "fetch_from": "pantry_customer.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "pantry_customer.first_name",
+   "fieldname": "pantry_customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Pantry Customer",
+   "options": "Pantry Customer",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Pantry Subscription",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "subscription_months",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Subscription Period (Months)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "package",
+   "fieldtype": "Link",
+   "label": "Package",
+   "options": "Pantry Packages"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "package.package_price",
+   "fieldname": "package_cost",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Package Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  }
+ ],
+ "image_field": "image",
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-11-29 08:42:53.681657",
+ "modified_by": "Administrator",
+ "module": "Pantry",
+ "name": "Pantry Subscription",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "pantry",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
